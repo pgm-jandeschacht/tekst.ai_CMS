@@ -1,0 +1,33 @@
+{
+  "name": "tekstai-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "CMS for Tekst.ai",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.0",
+    "@strapi/plugin-graphql": "4.1.11",
+    "@strapi/plugin-i18n": "4.1.11",
+    "@strapi/plugin-users-permissions": "4.1.11",
+    "@strapi/strapi": "4.1.11",
+    "better-sqlite3": "7.4.6",
+    "strapi-plugin-react-editorjs": "^2.0.1"
+  },
+  "author": {
+    "name": "Jan Deschacht"
+  },
+  "strapi": {
+    "uuid": "3f96c98f-7f02-4182-bfe3-30fc1bfef57c"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

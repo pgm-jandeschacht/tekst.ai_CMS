@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steplists",
+  "info": {
+    "singularName": "steplist",
+    "pluralName": "steplists",
+    "displayName": "Step list",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "step": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.step"
+    }
+  }
+}
