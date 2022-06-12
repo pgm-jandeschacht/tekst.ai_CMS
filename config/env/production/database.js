@@ -6,11 +6,11 @@ module.exports = ({ env }) => ({
       connector: 'bookshelf',
       settings: {
         client: 'postgres',
-        host: config.process.env.DATABASE_HOST,
-        port: config.process.env.DATABASE_PORT,
-        database: config.process.env.DATABASE_NAME,
-        user: config.process.env.DATABASE_USERNAME,
-        password: config.process.env.DATABASE_PASSWORD,
+        host: process.env.DATABASE_HOST,
+        port: process.env.DATABASE_PORT,
+        database: process.env.DATABASE_NAME,
+        user: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD,
       },
       options: {
         rejectUnauthorized: false
