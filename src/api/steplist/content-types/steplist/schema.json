@@ -12,14 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "step": {
+    "stepContainer": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.step"
+      "component": "custom.step-list"
     }
   }
 }
