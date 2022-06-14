@@ -1,4 +1,3 @@
-
 services:
   - type: web
     name: strapi
@@ -6,18 +5,16 @@ services:
     plan: starter
     buildCommand: yarn install && yarn build
     startCommand: yarn start
-    healthCheckPath: /_healthz
+    healthCheckPath: /_health
+    disk:
+      name: strapi-uploads
+      mountPath: /opt/render/project/src/public/uploads
+      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: ~16.13.0
       - key: NODE_ENV
         value: production
-      - key: CLOUDINARY_NAME
-        sync: false
-      - key: CLOUDINARY_KEY
-        sync: false
-      - key: CLOUDINARY_SECRET
-        sync: false
       - key: DATABASE_URL
         fromDatabase:
           name: strapi
