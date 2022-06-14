@@ -45,6 +45,6 @@ The website is deployed on [https://strapi-lhft.onrender.com/admin](https://stra
 
 ## Login
 
-To test the login, you can use the following credentials:
-email: tekst.ai.test@gmail.com
+To test the login, you can use the following credentials:  
+email: tekst.ai.test@gmail.com  
 password: Tester321
