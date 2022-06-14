@@ -17,8 +17,8 @@
       "unique": false,
       "required": true
     },
-    "answer": {
-      "type": "richtext",
+    "Answer": {
+      "type": "text",
       "required": true
     }
   }
