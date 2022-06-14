@@ -1,57 +1,50 @@
-# 🚀 Getting started with Strapi
+# Tekst.ai CMS
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+This is the CMS for Tekst.ai. It's a project made by [Jan Deschacht](https://github.com/pgm-jandeschacht) commissioned by Arteveldehogeschool and [Tekst.ai](https://tekst.ai) as a final project for @Work5 en the associate degree Programming.
 
-### `develop`
+## Technical overview
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+The CMS is made in [Strapi](https://strapi.io/). It's a content management system for the web. The endpoint is consumable as a GraphQL API.
 
-```
-npm run develop
-# or
-yarn develop
-```
+## Setup and usage
 
-### `start`
+The app uses **yarn** to install dependencies and to run the website as well.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+### Install dependencies
 
-```
-npm run start
-# or
-yarn start
-```
+Run ```yarn install``` to install all dependencies.
 
-### `build`
+### Environment variables
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+Make a file called `.env` in the root directory of the project and add the following lines:
 
 ```
-npm run build
-# or
-yarn build
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=OCy6KdO2okkorX5THy4DHw==,AU4ksr6x2z+xx8V2IIeZ3A==,qB7/7PltqZLj4x1bZ2cRVg==,v3V7QTc4iQYT6oGLEhgpuA==
+API_TOKEN_SALT=F0uIq8Q0rD4go2D3cr8K3Q==
+ADMIN_JWT_SECRET=0I7SbCuXKQ+6qOC3VLmQYQ==
+JWT_SECRET=txnC3Nb3vSShQ1eKxGyC5w==
 ```
 
-## ⚙️ Deployment
+### Run the website
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+Run ```yarn develop``` to run the website locally. This will start the server and prompt you to open [localhost:1337](https://localhost:1337). Here you can access the website.
 
-## 📚 Learn more
+### Local build
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+To test the build locally, you can run ```yarn build``` to build the website. This will create a folder called `build` in the root directory of the project. afterward you can run ```yarn start``` to run the website.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+## Deployment
 
-## ✨ Community
+The website is hosted on [render.com](https://render.com). To set it up you need to go to blueprints on the dashboard en connect to the repository. All the necessary commands and variables are in the render.yaml file so you don't need add something on render. Except the API_TOKEN_SALT environment variable needs to be added in the environment tab. Then it will start the build again. Now you are all set, a push to the main will trigger a build and a deploy.
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## Live site
 
----
+The website is deployed on [https://strapi-lhft.onrender.com/admin](https://strapi-lhft.onrender.com/admin).
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Login
+
+To test the login, you can use the following credentials:
+email: tekst.ai.test@gmail.com
+password: Tester321
